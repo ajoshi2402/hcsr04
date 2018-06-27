@@ -1,0 +1,21 @@
+name: distance2
+version: 'master'
+summary: distance2
+description: |
+  This snap reads distance from the obstacle. 
+
+grade: devel
+confinement: devmode
+
+apps:
+ distance2:
+   command: python3 HCSR04Test.py
+   daemon: simple
+   plugs: [gpio-memory-control] 
+
+parts:
+   distance2:
+       plugin: python
+       python-version: python3
+       python-packages: [RPi.GPIO]
+       source: .
