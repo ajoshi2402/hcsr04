@@ -1,4 +1,4 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 #------------------------------------
 # HC-SR04 Ultrasonic Ranging Module
 # -----------------------------------
