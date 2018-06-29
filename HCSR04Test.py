@@ -4,6 +4,10 @@
 #-----------------------------------------
 #
 # Use this script as an example.
+ chmod +x HCSR04Test.py
+Execute with
+
+./HCSR04Test.py
 
 import RPi.GPIO as GPIO
 import HCSR04Ultrasonic as hcsr
