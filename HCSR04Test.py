@@ -19,7 +19,7 @@ GPIO.setwarnings(False)
 try:
     while True:
         print("Distance: %.2fcm" %(hcsr.distance(-0.5))) # Offset to -0.5 | Round to the second decimal
-        data=urllib.urlopen("https://api.thingspeak.com/update?api_key=NVBW0ZTQ2W3BNTK2&field1="+str(hcsr);
+        data=urllib.urlopen("https://api.thingspeak.com/update?api_key=NVBW0ZTQ2W3BNTK2&field1="+str(hcsr.distance(-0.5)));
         print data
 	data.read()
 	data.close()
