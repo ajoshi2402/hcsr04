@@ -6,7 +6,7 @@
 #
 # Use this script as an example.
 
-
+import sys
 import RPi.GPIO as GPIO
 import HCSR04Ultrasonic as hcsr
 import time
@@ -18,11 +18,11 @@ GPIO.setwarnings(False)
 
 try:
     while True:
-        #print("Distance: %.2fcm" %(hcsr.distance(-0.5))) # Offset to -0.5 | Round to the second decimal
-        data=urllib.urlopen("https://api.thingspeak.com/update?api_key=NVBW0ZTQ2W3BNTK2&field1="+str(25));
-        print data
-	data.read()
-	data.close()
+        print("Distance: %.2fcm" %(hcsr.distance(-0.5))) # Offset to -0.5 | Round to the second decimal
+        baseURL="https://api.thingspeak.com/update?api_key=NVBW0ZTQ2W3BNTK2&field1="
+        f = urllib.urlopen(baseURL+str(hcsr.distance(-0.5))
+        f.read()
+        f.close()
 	time.sleep(5)
 
 except KeyboardInterrupt:
